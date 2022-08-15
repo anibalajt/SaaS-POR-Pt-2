@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,75 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return collectot and cars count 
+    $collectors = [
+        [
+            'name' => 'John Doe',
+            'cars' => [
+                [
+                    'name' => 'Ford',
+                    'year' => '2000'
+                ],
+                [
+                    'name' => 'Audi',
+                    'year' => '2010'
+                ],
+                [
+                    'name' => 'BMW',
+                    'year' => '2020'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Jane Doe',
+            'cars' => [
+                [
+                    'name' => 'Mercedes',
+                    'year' => '2005'
+                ],
+                [
+                    'name' => 'Porsche',
+                    'year' => '2015'
+                ],
+                [
+                    'name' => 'Ferrari',
+                    'year' => '2025'
+                ]
+            ]
+        ]
+    ];
+
+    $cars = [
+        [
+            'name' => 'Ford',
+            'year' => '2000'
+        ],
+        [
+            'name' => 'Audi',
+            'year' => '2010'
+        ],
+        [
+            'name' => 'BMW',
+            'year' => '2020'
+        ],
+        [
+            'name' => 'Mercedes',
+            'year' => '2005'
+        ],
+        [
+            'name' => 'Porsche',
+            'year' => '2015'
+        ],
+        [
+            'name' => 'Ferrari',
+            'year' => '2025'
+        ]
+    ];
+
+    return view('welcome', compact('collectors', 'cars'));
 });
+
+
+
+Route::get('/cars', [CarController::class, 'index']);
+Route::get('/cars/{id}', [CarController::class, 'show']);

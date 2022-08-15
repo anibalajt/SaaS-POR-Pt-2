@@ -50,6 +50,9 @@ RUN apt-get update \
 
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.1
 
+RUN pecl install mongodb
+RUN echo "extension=mongodb.so" > /etc/php/8.1/cli/php.ini
+
 RUN groupadd --force -g $WWWGROUP sail
 RUN useradd -ms /bin/bash --no-user-group -g $WWWGROUP -u 1337 sail
 
