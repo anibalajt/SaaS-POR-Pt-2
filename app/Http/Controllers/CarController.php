@@ -44,5 +44,4 @@ Class CarController extends Controller
         return view("cars.details", compact('id'));
     }
 
-
 }
