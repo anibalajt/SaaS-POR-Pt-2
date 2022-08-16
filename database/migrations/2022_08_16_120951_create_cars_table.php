@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -14,9 +15,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id')->unique();;
+            $table->string('code');
+            $table->string('manufacturer');
+            $table->string('model');
+            $table->integer('price');
+            $table->timestamps('date_create');
         });
+
     }
 
     /**

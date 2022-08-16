@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cars', function () {
-    return view('cars.index');
-});
+Route::get('/cars', CarController::class . '@index');
+Route::get('/cars/create', CarController::class . '@create');
+// save new car
+Route::post('/cars', [CarController::class, 'store']);
+// show car
+Route::get('/cars/{id}', CarController::class . '@show');
+// delete car
+Route::delete('/cars/{id}', [CarController::class, 'destroy']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
