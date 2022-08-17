@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <!-- if car is null diplay msg -->
-    @if ($car == null)
-    <p>Car not found</p>
-    @else
-    <!-- display car details -->
-    <table>
+@section('content')
+<!-- if car is null diplay msg -->
+@if ($car == null)
+<p>Car not found</p>
+@else
+<!-- display car details -->
+<div class="container">
+    <table class="table">
         <tr>
             <th>id</th>
             <th>Code</th>
@@ -32,17 +25,19 @@
     </table>
 
     <!-- form to delete car -->
-    <form action="/cars/<?php echo $car['id']; ?>" method="post">
-        @csrf
-        @method('DELETE')
-        <button type="submit">Delete</button>
-    </form>
-    
-    @endif
+    <!-- center form -->
+    <div class="row justify-content-center">
+        <form action="/cars/<?php echo $car['id']; ?>" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+
+@endif
 
 
 
 
-</body>
-
-</html>
+@endsection

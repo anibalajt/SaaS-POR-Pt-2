@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cars', CarController::class . '@index');
-Route::get('/cars/create', CarController::class . '@create');
+Route::get('/cars', CarController::class . '@index')->middleware('auth');
+Route::get('/cars/create', CarController::class . '@create')->middleware('auth');
 // save new car
-Route::post('/cars', [CarController::class, 'store']);
+Route::post('/cars', [CarController::class, 'store'])->middleware('auth');
 // show car
-Route::get('/cars/{id}', CarController::class . '@show');
+Route::get('/cars/{id}', CarController::class . '@show')->middleware('auth');
 // delete car
-Route::delete('/cars/{id}', [CarController::class, 'destroy']);
+Route::delete('/cars/{id}', [CarController::class, 'destroy'])->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-require __DIR__ . '/auth.php';
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

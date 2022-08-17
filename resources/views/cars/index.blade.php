@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <!-- popu;ate cars -->
-    <table>
+@section('content')
+<!-- popu;ate cars -->
+<div class="container">
+    <table class="table ">
         <tr>
             <th>id</th>
             <th>Code</th>
             <th>Manufacturer</th>
             <th>Model</th>
             <th>Price</th>
+            <th></th>
         </tr>
         <?php foreach ($cars as $car) { ?>
             <tr>
@@ -25,9 +19,10 @@
                 <td>{{ $car->manufacturer }}</td>
                 <td>{{ $car->model }}</td>
                 <td>{{ $car->price }}</td>
-                
+                <!-- add accion to open the car -->
+                <td><a href="/cars/{{ $car->id }}">Open</a></td>
             </tr>
         <?php } ?>
-</body>
-
-</html>
+    </table>
+</div>
+@endsection
