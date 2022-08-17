@@ -24,5 +24,10 @@
             </tr>
         <?php } ?>
     </table>
+    <!-- btn to create car -->
+    <div class="row justify-content-center">
+        <a href="/cars/create" class="btn btn-primary">Create Car</a>
+    </div>
+
 </div>
 @endsection

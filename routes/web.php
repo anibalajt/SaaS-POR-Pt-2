@@ -19,14 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cars', CarController::class . '@index')->middleware('auth');
-Route::get('/cars/create', CarController::class . '@create')->middleware('auth');
+Route::get('/cars', CarController::class . '@index');
+Route::get('/cars/create', CarController::class . '@create');
 // save new car
-Route::post('/cars', [CarController::class, 'store'])->middleware('auth');
+Route::post('/cars', [CarController::class, 'store']);
 // show car
-Route::get('/cars/{id}', CarController::class . '@show')->middleware('auth');
+Route::get('/cars/{id}', CarController::class . '@show');
 // delete car
-Route::delete('/cars/{id}', [CarController::class, 'destroy'])->middleware('auth');
+Route::delete('/cars/{id}', [CarController::class, 'destroy']);
 
 
 Auth::routes();

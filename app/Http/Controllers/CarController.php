@@ -3,11 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cars;
+use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 
 
 class CarController extends Controller
 {
+
+    public function __construct()
+    {
+        // Middleware
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $cars = Cars::all();
@@ -25,7 +33,7 @@ class CarController extends Controller
         $id = (int)$id;
         $car = Cars::where("id", $id)->first();
 
-        return view("cars.show",compact("car"));
+        return view("cars.show", compact("car"));
     }
 
     public function create()
@@ -35,10 +43,11 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
-        // get the next id from mongo to create a new car
-        $id = Cars::all()->count() + 1;
+        //get the last inserted 
+        $id = Cars::orderBy("id", "desc")->first()->id;
+
         $car = new Cars();
-        $car->id = $id;
+        $car->id = $id + 1;
         $car->code = $request->code;
         $car->manufacturer = $request->manufacturer;
         $car->model = $request->model;
