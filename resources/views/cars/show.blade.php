@@ -9,14 +9,12 @@
 <div class="container">
     <table class="table">
         <tr>
-            <th>id</th>
             <th>Code</th>
             <th>Manufacturer</th>
             <th>Model</th>
             <th>Price</th>
         </tr>
         <tr>
-            <td>{{ $car->id }}</td>
             <td>{{ $car->code }}</td>
             <td>{{ $car->manufacturer }}</td>
             <td>{{ $car->model }}</td>
@@ -27,7 +25,7 @@
     <!-- form to delete car -->
     <!-- center form -->
     <div class="row justify-content-center">
-        <form action="/cars/<?php echo $car['id']; ?>" method="post">
+        <form action="/cars/<?php echo $car['code']; ?>" method="post">
             @csrf
             @method('DELETE')
             <button type="submit">Delete</button>

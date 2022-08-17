@@ -15,14 +15,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->increments('id')->unique();;
+            // $table->increments('id')->unique();;
             $table->string('code');
             $table->string('manufacturer');
             $table->string('model');
             $table->integer('price');
             $table->timestamps('date_create');
-        });
 
+            $table->index(['code'], 'code', null, ['sparse' => true, 'unique' => true, 'background' => true,]);
+        });
     }
 
     /**
@@ -32,6 +33,8 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('cars');
+
         Schema::dropIfExists('cars');
     }
 };

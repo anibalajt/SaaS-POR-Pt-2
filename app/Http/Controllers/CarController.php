@@ -26,15 +26,14 @@ class CarController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($code)
     {
-        // $car = Cars::find($id);
-        // parse int
-        $id = (int)$id;
-        $car = Cars::where("id", $id)->first();
-
-        return view("cars.show", compact("car"));
+        $car = Cars::where("code", $code)->first();
+        return view("cars.show", [
+            "car" => $car
+        ]);
     }
+
 
     public function create()
     {
@@ -43,11 +42,8 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
-        //get the last inserted 
-        $id = Cars::orderBy("id", "desc")->first()->id;
 
         $car = new Cars();
-        $car->id = $id + 1;
         $car->code = $request->code;
         $car->manufacturer = $request->manufacturer;
         $car->model = $request->model;
@@ -56,11 +52,9 @@ class CarController extends Controller
         return redirect('/cars');
     }
 
-    public function destroy($id)
+    public function destroy($code)
     {
-        // parse int
-        $id = (int)$id;
-        $car = Cars::where("id", $id)->first();
+        $car = Cars::where("code", $code)->first();
         $car->delete();
         return redirect('/cars');
     }
