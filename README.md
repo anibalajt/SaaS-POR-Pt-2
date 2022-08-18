@@ -1,64 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# CODE STYLE GUIDELINES 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The following guidelines should be applied to your code as it is developed.
 
-## About Laravel
+Many may be applied via the use of PhpStorm, PyCharm or similar plugins and code formatting.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### PHP Code (General)
+Please refer to the PHP PSRs:
+- https://www.php-fig.org/psr/psr-1/
+- https://www.php-fig.org/psr/psr-12/
+- https://www.php-fig.org/psr/psr-4/
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Applications Built with Laravel
+Please refer to the following articles:
+- https://dev.to/lathindu1/laravel-best-practice-coding-standards-part-01-304l
+- https://dev.to/lathindu1/laravel-best-practice-coding-standards-part-02-a40
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### HTML Code
+- Please refer to the Google Style guide:
+- https://google.github.io/styleguide/htmlcssguide.html
 
-## Learning Laravel
+### JavaScript
+Refer to the Google JS Style guide:
+- https://google.github.io/styleguide/jsguide.html
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Python Code
+Your code will follow the PEP 8 standard. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<br/>
+<br/>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Cars Data
 
-### Premium Partners
+| Code| Manufacturer | Model|Price|
+|------------|--------------|------------|--------------|
+|MOGAN-44   |Morgan    |4/4    |107000.00|
+|BMW-1|BMW|1 Series|71900.00|
+|BMW-2|BMW|3 Series|111900.00|
+|MINI-3DH|Mini|3D Hatch|62825.00|
+|MINI-5DH|Mini|5D Hatch|54450.00|
+|BMW-8|BMW|8 Series|359900.00|
+|AUDI-A1|Audi|A1|47800.00|
+|AUDI-A8|Audi|A8|298472.00|
+|MORGAN-AEROC|Morgan|Aero Coupe|270000.00|
+|VW-AMAROK|Volkswagen|Amarok|81490.00|
+|VW-ARTEON|Volkswagen|Arteon|68740.00|
+|ARIEL-ATOM4|Ariel|Atom 3.5R|188000.00|
+|ARIEL-ATOM4|Ariel|Atom 4||
+|MINI-CLUB|Mini|Clubman|70600.00|
+|MINI-CONV|Mini|Convertible|67880.00|
+|MINI-COOPER|Mini|Cooper|41800.00|
+|TESLA-TRUCK|Tesla|Cybertruck|103300.00|
+|AUDI-EGT|Audi|e-tron GT||
+|VW-GOLF|Volkswagen|Golf|65990.00|
+|MG-HS|MG|HS|47990.00|
+|BMW-I|BMW|i Series|70900.00|
+|BMW-M|BMW|M|274900.00|
+|BMW-M2|BMW|M2|182500.00|
+|BMW-M6|BMW|M6|171500.00|
+|MG-MGZS|MG|MG ZS|42990.00|
+|MG-MG3|MG|MG3|19490.00|
+|TESLA-MOD3|Tesla|Model 3|91672.00|
+|TESLA-MODS|Tesla|Model S|155430.00|
+|TESLA-MODX|Tesla|Model X|191730.00|
+|TESLA-MODY|Tesla|Model Y|98172.00|
+|VW-POLO|Volkswagen|Polo|38750.00|
+|AUDI-Q2|Audi|Q2|52200.00|
+|MORGAN-ROADSTER|Morgan|Roadster|145000.00|
+|AUDI-S8|Audi|S8|258877.00|
+|VW-TROC|Volkswagen|T-ROC|42700.00|
+|AUDI-TT|Audi|TT|14200.00|
+|KTM-XBOWR|KTM|X-Bow R|16990.00|
+<br/>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<br/>
 
-## Contributing
+## Collectors Data
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+|Given Name |Family Name|QTY  |Car List|
+|-----------|-----------|-----|--------|
+Evan|Keel|8|“AUDI-TT”, “TESLA-TRUCK”, “AUDI-TT”, “MOGAN-44”, “BMW-8”,“TESLA-MODX”, “MORGAN-AEROC”|
+|Jo|Kerr|3|“AUDI-S8”, “TESLA-MODY”, “AUDI-A1”|
+|Izzy|Kidding|8|“MG-MGZS”, “TESLA-TRUCK”, “AUDI-A1”, “VW-ARTEON”, “MINI-CONV”, “AUDI-TT”, “MG-MGZS”, “MORGAN-ROADSTER”|
+|Fay|King|2|“BMW-I”, “BMW-1”|
+Joe|King|3|“BMW-M2”, “BMW-M6”, “MINI-3DH”
+|Raney|Schauer|5|“MINI-5DH”, “KTM-XBOWR”, “BMW-2”, “MINI-CONV”, “AUDI-A8”|June|Schauer|4|“MG-MG3”, “MINI-CLUB”, “MINI-3DH”, “MORGAN-ROADSTER”
+|April|Schauer|8|“AUDI-A8”, “BMW-8”, “ARIEL-ATOM4”, “AUDI-Q2”, “MINI-3DH”, “MORGAN-AEROC”, “TESLA-MOD3”, “AUDI-EGT”|
+|Al K.|Seltzer|7|“AUDI-A8”“TESLA-MODX”, “VW-ARTEON”, “TESLA-MOD3”, “BMW-M6”, “BMW-M2”
+|Dee|Sember|1|“MG-MGZS”|
+|Justin|Tune|0||
+|Carrie A.|Tune|1|“ARIEL-ATOM4”
+|Quinn|Tuplets|2|“MG-MGZS”, “MORGAN-AEROC”|
+|Colin|Allcars|7|“MG-MGZS”, “MG-HS”, “MINI-CONV”, “MORGAN-ROADSTER”, “BMW-M6”, “VW-GOLF”, “MORGAN-ROADSTER”|
+|Cary|Baggs|7|“MOGAN-44”, “TESLA-MODS”, “ARIEL-ATOM4”, “MORGAN-AEROC”, “BMW-M6”, “AUDI-Q2”, “MOGAN-44”|
+|Winnie|Bago|1|“MORGAN-ROADSTER”|
+|Frank N.|Beans|3|“MORGAN-AEROC”, “BMW-M2”|Harry|Beard|9|“AUDI-S8”, “MINI-COOPER”, “TESLA-MODS”, “AUDI-EGT”, “VW-POLO”, “ARIEL-ATOM4”, “MINI-COOPER”, “AUDI-EGT”, “BMW-2”|
+|Al B.|Zienya|3|“ARIEL-ATOM4”, “BMW-8”, “AUDI-A1”|
+|Cy|Yonarra|2|“BMW-I”, “TESLA-TRUCK”|
+|Pearl E.|White|10|“TESLA-TRUCK”, “MORGAN-ROADSTER”, “ARIEL-ATOM4”, “ARIEL-ATOM4”, “MG-HS”, “BMW-M”, “MINI-5DH”, “BMW-M2”, “VW-AMAROK”, “VW-POLO”|Sno|White|10|“TESLA-MODY”, “VW-TROC”, “MG-MGZS”, “BMW-M2”, “VW-POLO”, “AUDI-S8”, “BMW-M2”, “BMW-8”, “VW-TROC”, “TESLA-MOD3”|
+|Chuck|Wagon|1|“TESLA-MODY”|
+|Patty|Wagon|9|“TESLA-MODX”, “TESLA-MODY”, “MORGAN-AEROC”, “MINI-3DH”, “BMW-M2”, “AUDI-EGT”, “BMW-1”, “AUDI-Q2”, “VW-TROC”|
+|Cara|Van|2|“TESLA-MODS”, “ARIEL-ATOM4”|
+<br/>
 
-## Code of Conduct
+<br/>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Cars EDIT Data
 
-## Security Vulnerabilities
+|Code|Manufacturer|Model|Price|
+|-----------|-----------|-----|--------|
+||MINI-CONV|Mini|Convertible|68770.00|
+|BMW-M6|BMW|M6|171480.00|
+|TESLA-MODY|Tesla|Model Y|98170.00|
+<br/>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<br/>
 
-## License
+## Cars DELETE Data
+|Code|Manufacturer|Model|Price|
+|-----------|-----------|-----|--------|
+|TESLA-MOD3|Tesla|Model 3|91672.00|
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
