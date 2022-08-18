@@ -16,7 +16,7 @@ class CarsSeeder extends Seeder
     public function run()
     {
 
-        $newCars = [
+        $Cars = [
             [
                 "code" => "MOGAN-44",
                 "manufacturer" => "Morgan",
@@ -235,7 +235,7 @@ class CarsSeeder extends Seeder
             ]
         ];
 
-        foreach ($newCars as $newCar) {
+        foreach ($Cars as $newCar) {
             $car = new Cars();
             $car->code = $newCar["code"];
             $car->manufacturer = $newCar["manufacturer"];

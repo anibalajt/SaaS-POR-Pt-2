@@ -71,6 +71,10 @@
                                 </form>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cars">Cars</a>
+                        </li>
+
                         @endguest
                     </ul>
                 </div>
